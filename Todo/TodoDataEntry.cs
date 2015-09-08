@@ -173,9 +173,7 @@ namespace Todo
 				json.XPath = "/json/status";
 				if ("\"success\"" == json.XText) {
 					appDelegate.navigationController.PopViewController(true);
-					// TodoListView._kludge.LoadTodo();
 
-					// TodoListView._kludge.dataSource.ItemSource = await TodoListView._kludge.LoadTodo ();
 					await TodoListView._kludge.LoadTodo();
 					TodoListView._kludge.dataSource.ReloadData();
 					TodoListView._kludge.listView.ReloadData();
