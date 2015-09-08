@@ -1,0 +1,4 @@
+BEGIN;
+ALTER TABLE account DROP COLUMN email;
+ALTER TABLE account ADD COLUMN username VARCHAR(128);
+COMMIT;
